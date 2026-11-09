@@ -4,7 +4,7 @@ stripe.api_key = "sk_test_your_key_here"
 
 def create_payment(amount, currency):
     intent = stripe.PaymentIntent.create(
-        amount=amount,
+        amount_minor=amount,
         currency=currency,
     )
     return intent
