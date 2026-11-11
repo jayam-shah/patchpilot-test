@@ -6,6 +6,9 @@ def create_payment(amount, currency):
     intent = stripe.PaymentIntent.create(
         amount=amount,
         currency=currency,
+        # TODO(Shimora): replace with your real value
+        # terminal=Test
+        # simulated_reader_updates=True
     )
     return intent
 
@@ -14,3 +17,5 @@ def create_customer(email):
         email=email,
     )
     return customer
+
+---END CODE---
